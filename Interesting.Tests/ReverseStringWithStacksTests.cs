@@ -1,15 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace Interesting.Tests
 {
     [TestClass]
     public class ReverseStringWithStacksTests
     {
+        private const string Category = "Reverse String";
         private ReverseStringWithStacks _reverseStrategy;
 
         [TestInitialize]
@@ -18,6 +14,7 @@ namespace Interesting.Tests
             _reverseStrategy = new ReverseStringWithStacks();
         }
 
+        [TestCategory(Category)]
         [TestMethod]
         public void WhenStringIsNullOrEmptyMustReturnTheSame()
         {
@@ -31,6 +28,7 @@ namespace Interesting.Tests
             Assert.AreEqual(result, "tac dna god");
         }
 
+        [TestCategory(Category)]
         [TestMethod]
         public void WhenThereExistsLeadingDelimeterMustReturnTheSame()
         {
@@ -44,6 +42,7 @@ namespace Interesting.Tests
             Assert.AreEqual(result, " tac dna god");
         }
 
+        [TestCategory(Category)]
         [TestMethod]
         public void WhenThereExistsTrailingDelimeterMustReturnTheSame()
         {
@@ -57,6 +56,7 @@ namespace Interesting.Tests
             Assert.AreEqual(result, "tac dna god ");
         }
 
+        [TestCategory(Category)]
         [TestMethod]
         public void WhenThereExistsPunctuationMarksMustReturnTheSame()
         {
