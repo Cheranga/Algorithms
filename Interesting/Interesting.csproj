@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ITriangle.cs" />
     <Compile Include="ReverseStringWithStacks.cs" />
     <Compile Include="IReverseString.cs" />
     <Compile Include="ListItem.cs" />

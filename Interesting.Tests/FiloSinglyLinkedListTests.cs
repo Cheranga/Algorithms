@@ -1,13 +1,14 @@
 ﻿using System;
-using System.Security.Cryptography.X509Certificates;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Interesting;
 
 namespace Interesting.Tests
 {
     [TestClass]
     public class FiloSinglyLinkedListTests
     {
+        private const string Category = "Singly Linked List";
+
+        [TestCategory(Category)]
         [TestMethod]
         public void AddingAnItemToAnEmptyListMustBeSuccessful()
         {
@@ -22,11 +23,12 @@ namespace Interesting.Tests
             //
             // Assert
             //
-            Assert.AreEqual(list[0],1);
+            Assert.AreEqual(list[0], 1);
         }
 
+        [TestCategory(Category)]
         [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        [ExpectedException(typeof (ArgumentOutOfRangeException))]
         public void WhenTheListIsEmptyAccessingViaIndexerMustFail()
         {
             //
@@ -39,8 +41,9 @@ namespace Interesting.Tests
             var data = list[0];
         }
 
+        [TestCategory(Category)]
         [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        [ExpectedException(typeof (ArgumentOutOfRangeException))]
         public void WhenNegativeIndexProvidedAccessingViaIndexerMustFail()
         {
             //
@@ -53,8 +56,9 @@ namespace Interesting.Tests
             var data = list[-1];
         }
 
+        [TestCategory(Category)]
         [TestMethod]
-        [ExpectedException(typeof(ArgumentOutOfRangeException))]
+        [ExpectedException(typeof (ArgumentOutOfRangeException))]
         public void WhenIndexIsGreaterThanCountAccessingViaIndexerMustFail()
         {
             //
@@ -69,6 +73,7 @@ namespace Interesting.Tests
             var data = list[1];
         }
 
+        [TestCategory(Category)]
         [TestMethod]
         public void WhenThereIsOnlyOneEntityAccessingItViaIndexerMustBeSuccessful()
         {
